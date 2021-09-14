@@ -1,0 +1,199 @@
+--Find the salaries of all employees--
+select Salary from EMPLOYEE;
+
+    SALARY
+----------
+      5000
+      5000
+      2000
+      3000
+      5500
+      4000
+      2500
+      5000
+      5000
+      5000
+
+--List the employees who does have DNO 11--
+SELECT * FROM EMPLOYEE WHERE Dno NOT IN (11);
+FNAME           M LNAME           SSN       BDATE
+--------------- - --------------- --------- ---------
+ADDRESS                        S     SALARY SUPER_SSN        DNO
+------------------------------ - ---------- --------- ----------
+James           A Wu              123456789 03-JAN-00
+1234 Happy Street              M       5000 ABCDEFGHI         23
+
+Fiona           D Fuserlier       601459631 07-JAN-06
+2461 Brown Street              F       5000 null              68
+
+Abi             C Jack            756123850 01-MAY-01
+1618 Gogo Street               M       2000 888661111         19
+
+
+FNAME           M LNAME           SSN       BDATE
+--------------- - --------------- --------- ---------
+ADDRESS                        S     SALARY SUPER_SSN        DNO
+------------------------------ - ---------- --------- ----------
+Aaron           C Walker          746125852 02-JAN-03
+1842 Rage Street               M       3000 555555555         20
+
+Kim             J Wallen          123452146 01-MAY-50
+1111 Meridian Street           M       5500 111111111         13
+
+Colin           N Parnell         146857039 01-AUG-01
+1046 Yonge Street              M       2500 444444444         43
+
+
+FNAME           M LNAME           SSN       BDATE
+--------------- - --------------- --------- ---------
+ADDRESS                        S     SALARY SUPER_SSN        DNO
+------------------------------ - ---------- --------- ----------
+Dave            J Siu             129468521 01-JUL-13
+1918 Starforce Street          M       5000 666666666         82
+
+
+Geroge          L Chen            326485014 04-JAN-26
+1224 James Street              M       5000 111555554         34
+
+Jim             B Wong            214035821 09-AUG-21
+1334 Hanna Street              M       5000 666555555         10
+
+Get all employees in the research department
+SELECT Fname, Lname FROM EMPLOYEE WHERE Dno IN (SELECT Dnumber FROM DEPARTMENT WHERE Dname='Research');
+
+FNAME           LNAME
+--------------- ---------------
+Geroge          Chen
+
+
+SELECT Fname, Lname FROM EMPLOYEE where Dno NOT IN (select Dnumber From DEPARTMENT WHERE Dnumber= '34');
+FNAME           LNAME
+--------------- ---------------
+James           Wu
+Fiona           Fuserlier
+Abi             Jack
+Aaron           Walker
+Kim             Wallen
+Maddy           Balcom
+Colin           Parnell
+Dave            Siu
+Jim             Wong
+
+
+--Get all male students full name in programs other than Computer Science Department--
+select Fname, Minit, Lname from EMPLOYEE where Sex = 'M' and DNO NOT IN (select Dnumber From DEPARTMENT WHERE Dnumber = '13');
+FNAME           M LNAME
+--------------- - ---------------
+James           A Wu
+Abi             C Jack
+Aaron           C Walker
+Colin           N Parnell
+Dave            J Siu
+Geroge          L Chen
+Jim             B Wong
+
+
+
+Get all female students’ full name in programs other than Research  Department
+select Fname, Minit, Lname from EMPLOYEE where Sex = 'F' and DNO NOT IN (select Dnumber From DEPARTMENT WHERE Dnumber = '34');
+
+
+FNAME           M LNAME
+--------------- - ---------------
+Fiona           D Fuserlier
+Maddy           M Balcom
+
+--Get all PROJECT in the catalogue--
+select Pname|| Pnumber|| Plocation || DNUM from PROJECT;
+
+PNAME||PNUMBER||PLOCATION||DNUM
+--------------------------------------------------------------------------------
+Endless Runner115Library13
+Blood Pressure105Home34
+
+--Show the entire WORKS_ON data scheme--
+Select * from WORKS_ON;
+ESSN             PNO      HOURS
+--------- ---------- ----------
+123456789        115          8
+214035821        105          9
+452146985        115          6
+129468521        105          9
+746125852        105          6
+146857039        115          6
+
+--Show the entire DEPT_LOCATIONS data scheme--
+Select * from DEPT_LOCATIONS;
+   DNUMBER DLOCATION
+---------- ---------------
+        10 Walkergate
+        11 Houston
+        13 Detroit
+        34 Kingsville
+
+
+--Show the entire DEPENDENT data scheme--
+select * from DEPENDENT;
+ESSN      DEPENDENT_NAME  S BDATE     RELATION
+--------- --------------- - --------- --------
+123456789 Andy Wei        M 02-JAN-03 Spouse
+756123850 Kevin La        M 09-AUG-21 Spouse
+746125852 Jason Wu        M 06-JAN-50 Son
+
+Count the no. of characters with out considering the spaces for each name
+SELECT length(trim(pname)) FROM PROJECT;
+
+LENGTH(TRIM(PNAME))
+-------------------
+                 14
+                 14
+
+--Get employee first name, last name and salary--
+SELECT FNAME, LNAME, Salary FROM EMPLOYEE;
+FNAME           LNAME               SALARY
+--------------- --------------- ----------
+James           Wu                    5000
+Fiona           Fuserlier             5000
+Abi             Jack                  2000
+Aaron           Walker                3000
+Kim             Wallen                5500
+Maddy           Balcom                4000
+Colin           Parnell               2500
+Dave            Siu                   5000
+Geroge          Chen                  5000
+Jim             Wong                  5000
+
+--Get all Employee’s first and last name with salary over $4,000.00--
+SELECT Fname, Lname FROM EMPLOYEE where Salary > 4000;
+FNAME           LNAME
+--------------- ---------------
+James           Wu
+Fiona           Fuserlier
+Kim             Wallen
+Dave            Siu
+Geroge          Chen
+Jim             Wong
+
+--Get all Male Employee’s full name with salary less then $4,000.00--
+SELECT Fname, Lname FROM EMPLOYEE where Salary < 4000 and Sex='M';
+FNAME           LNAME
+--------------- ---------------
+Abi             Jack
+Aaron           Walker
+Colin           Parnell
+
+
+Get all Female Employee’s full name with salary greater then $4,000.00
+SELECT Fname, Lname FROM EMPLOYEE where Salary > 4000 and Sex=’F’;
+FNAME           LNAME
+--------------- ---------------
+Fiona           Fuserlier
+
+
+Get all employees that works 6 hours
+SELECT Fname, Lname FROM EMPLOYEE WHERE SSn IN (SELECT Essn FROM WORKS_ON WHERE Hours='6');
+FNAME           LNAME
+--------------- ---------------
+Colin           Parnell
+Maddy           Balcom
+Aaron           Walker

@@ -1,0 +1,95 @@
+select * from EMPLOYEE;
+FNAME           M LNAME           SSN       BDATE
+--------------- - --------------- --------- ---------
+ADDRESS                        S     SALARY SUPER_SSN        DNO
+------------------------------ - ---------- --------- ----------
+James           A Wu              123456789 03-JAN-00
+1234 Happy Street              M       5000 ABCDEFGHI         23
+
+Fiona           D Fuserlier       601459631 07-JAN-06
+2461 Brown Street              F       5000 null              68
+
+Abi             C Jack            756123850 01-MAY-01
+1618 Gogo Street               M       2000 888661111         19
+
+
+FNAME           M LNAME           SSN       BDATE
+--------------- - --------------- --------- ---------
+ADDRESS                        S     SALARY SUPER_SSN        DNO
+------------------------------ - ---------- --------- ----------
+Aaron           C Walker          746125852 02-JAN-03
+1842 Rage Street               M       3000 555555555         20
+
+Kim             J Wallen          123452146 01-MAY-50
+1111 Meridian Street           M       5500 111111111         13
+
+Maddy           M Balcom          452146985 06-JAN-50
+1364 Geroge Street             F       4000 222222555         11
+
+
+FNAME           M LNAME           SSN       BDATE
+--------------- - --------------- --------- ---------
+ADDRESS                        S     SALARY SUPER_SSN        DNO
+------------------------------ - ---------- --------- ----------
+Colin           N Parnell         146857039 01-AUG-01
+1046 Yonge Street              M       2500 444444444         43
+
+Dave            J Siu             129468521 01-JUL-13
+1918 Starforce Street          M       5000 666666666         82
+
+Geroge          L Chen            326485014 04-JAN-26
+1224 James Street              M       5000 111555554         34
+
+
+FNAME           M LNAME           SSN       BDATE
+--------------- - --------------- --------- ---------
+ADDRESS                        S     SALARY SUPER_SSN        DNO
+------------------------------ - ---------- --------- ----------
+Jim             B Wong            214035821 09-AUG-21
+1334 Hanna Street              M       5000 666555555         10
+
+
+select * from DEPARTMENT;
+DNAME              DNUMBER    SSN   MGR_START
+--------------- ---------- --------- ---------
+CS                      13 452146985 09-JAN-00
+Math                    11 601459631 09-JAN-10
+Nursing                 10 129468521 09-JAN-05
+Research                34 214035821 06-SEP-81
+
+
+select * from DEPT_LOCATIONS;
+   DNUMBER DLOCATION
+---------- ---------------
+        10 Walkergate
+        11 Houston
+        13 Detroit
+        34 Kingsville
+
+select * from Project;
+PNAME              PNUMBER PLOCATION          DNUMBER
+--------------- ---------- --------------- ----------
+Endless Runner         115 Library                 13
+Blood Pressure         105 Home                    34
+
+select * from WORKS_ON;
+ESSN             PNO      HOURS
+--------- ---------- ----------
+123456789        115          8
+214035821        105          9
+452146985        115          6
+129468521        105          9
+746125852        105          6
+146857039        115          6
+
+
+
+select * from DEPENDENT;
+ESSN      DEPENDENT_NAME  S BDATE     RELATION
+--------- --------------- - --------- --------
+123456789 Andy Wei        M 02-JAN-03 Spouse
+756123850 Kevin La        M 09-AUG-21 Spouse
+746125852 Jason Wu        M 06-JAN-50 Son
+
+
+

@@ -1,0 +1,248 @@
+Script started on 2021-09-12 14:18:37-04:00 [TERM="xterm" TTY="/dev/pts/0" COLUMNS="100" LINES="35"]
+[?2004hwu154@bravo.cs.uwindsor.ca:~$ sqlplus [K
+[?2004l
+SQL*Plus: Release 12.1.0.2.0 Production on Sun Sep 12 14:18:49 2021
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Enter user-name: [KEnter user-name: [K[?2004hEnter user-name: wu154[?2004l[Kwu154
+Enter password: [KEnter password: [K[?2004h[KEnter password: [17G[17G[KEnter password: *[18G[18G[KEnter password: **[19G[19G[KEnter password: ***[20G[20G[KEnter password: ****[21G[21G[KEnter password: *****[22G[22G[KEnter password: ******[23G[23G[KEnter password: *******[24G[24G[KEnter password: ********[25G[25G[KEnter password: *********[26G[26G[KEnter password: **********[27G[27G[KEnter password: ***********[28G[28G[KEnter password: ************[29G[29G[KEnter password: *************[30G[30G[17G[?2004l[KEnter password: [17G
+[K
+Connected to:
+Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+
+SQL> [KSQL> [K[?2004hSQL> CREATE TABLE EMPLOYEE[C[C[C[C[C[?2004l[K[K[?2004h(Fname VARCHAR(15)[C[C[C[C[K[?2004lCREATE TABLE EMPLOYEE
+  2  [K[?2004h  2  (Fname VARCHAR(15) NOT NULL, Minit CHAR, Lname VARCHAR(15)[C[C[C[C NOT NULL, Ssn CHAR(9)[C[C[C NOT NULL, Bdate DATE, Address VARCHAR(30)[C[C[C[C, Sex CHAR, Salary DECIMAL (10,2)[C[C[C[C[C[C, Super_ssn CHAR(9)[C[C[C, Dno INT NOT NULL, PRIMARY KEY (Ssn)[C[C[C[C[C;[A[A[C[C[C[C[C[?2004l[K
+[K
+[K[A[A[C[C[C[C[C(Fname VARCHAR(15) NOT NULL, Minit CHAR, Lname VARCHAR(15) NOT NULL, Ssn CHAR(9) NOT NULL, Bdate DATE, Address VARCHAR(30), Sex CHAR, Salary DECIMAL (10,2), Super_ssn CHAR(9), Dno INT NOT NULL, PRIMARY KEY (Ssn);
+(Fname VARCHAR(15) NOT NULL, Minit CHAR, Lname VARCHAR(15) NOT NULL, Ssn CHAR(9) NOT NULL, Bdate DATE, Address VARCHAR(30), Sex CHAR, Salary DECIMAL (10,2), Super_ssn CHAR(9), Dno INT NOT NULL, PRIMARY KEY (Ssn)
+                                                                                                                                                                                                                  *
+ERROR at line 2:
+ORA-00907: missing right parenthesis
+
+
+SQL> [KSQL> [K[?2004hSQL> CREATE TABLE EMPLOYEE(Fname VARCHAR(15)[C[C[C[C NOT NULL, Minit CHAR, Lname VARCHAR(15)[C[C[C[C NOT NULL, Ssn CHAR(9)[C[C[C NOT NULL, Bdate DATE, Address VARCHAR(30)[C[C[C[C, Sex CHAR, Salary DECIMAL (10,2)[C[C[C[C[C[C, Super_ssn CHAR(9) [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+, Dno INT NOT NULL, PRIMARY KEY (Ssn)[C[C[C[C[C;[A[A[C[C[C[C[C[?2004l[K
+[K
+[K[A[A[C[C[C[C[CCREATE TABLE EMPLOYEE(Fname VARCHAR(15) NOT NULL, Minit CHAR, Lname VARCHAR(15) NOT NULL, Ssn CHAR(9) NOT NULL, Bdate DATE, Address VARCHAR(30), Sex CHAR, Salary DECIMAL (10,2), Super_ssn CHAR(9), Dno INT NOT NULL, PRIMARY KEY (Ssn);
+CREATE TABLE EMPLOYEE(Fname VARCHAR(15) NOT NULL, Minit CHAR, Lname VARCHAR(15) NOT NULL, Ssn CHAR(9) NOT NULL, Bdate DATE, Address VARCHAR(30), Sex CHAR, Salary DECIMAL (10,2), Super_ssn CHAR(9), Dno INT NOT NULL, PRIMARY KEY (Ssn)
+                                                                                                                                                                                                                                       *
+ERROR at line 1:
+ORA-00907: missing right parenthesis
+
+
+SQL> [KSQL> [K[?2004hSQL> CREATE TABLE EMPLOYEE([C[C[C[C[C[?2004l[KCREATE TABLE EMPLOYEE(
+  2  [K  2  [K[?2004h  2  Fname VARCHAR(15)[C[C[C[C NOT NULL, Minit CHAR, Lname VARCHAR(15)[C[C[C[C NOT NULL, Ssn CHAR(9)[C[C[C NOT NULL, Bdate DATE, Address VARCHAR(30)[C[C[C[C, Sex CHAR, Salary DECIMAL (10,2)[C[C[C[C[C[C, Super_ssn CHAR(9)[C[C[C, Dno INT NOT NULL, PRIMARY KEY (Ssn)[C[C[C[C[C;[A[A[C[C[C[C[C[?2004l[K
+[K
+[K[A[A[C[C[C[C[CFname VARCHAR(15) NOT NULL, Minit CHAR, Lname VARCHAR(15) NOT NULL, Ssn CHAR(9) NOT NULL, Bdate DATE, Address VARCHAR(30), Sex CHAR, Salary DECIMAL (10,2), Super_ssn CHAR(9), Dno INT NOT NULL, PRIMARY KEY (Ssn);
+Fname VARCHAR(15) NOT NULL, Minit CHAR, Lname VARCHAR(15) NOT NULL, Ssn CHAR(9) NOT NULL, Bdate DATE, Address VARCHAR(30), Sex CHAR, Salary DECIMAL (10,2), Super_ssn CHAR(9), Dno INT NOT NULL, PRIMARY KEY (Ssn)
+                                                                                                                                                                                                                 *
+ERROR at line 2:
+ORA-00907: missing right parenthesis
+
+
+SQL> [KSQL> [K[?2004hSQL> Fname VARCHAR(15) NOT NULL, Minit CHAR, Lname VARCHAR(15) NOT NULL, Ssn CHAR(9) NOT NULL, Bdate DATE, Address VARCHAR(30), Sex CHAR, Salary DECIMAL (10,2), Super_ssn CHAR(9), Dno INT NOT NULL, PRIMARY KEY (Ssn);[A[A[C[C[C[C[CCREATE TABLE EMPLOYEE([K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[?2004l[KCREATE TABLE EMPLOYEE(
+  2  [K  2  [K[?2004h  2  Fname VARCHAR(15)[C[C[C[C NOT NULL,[C[C[C[C[C[?2004l[KFname VARCHAR(15) NOT NULL,
+  3  [K  3  [K[?2004h  3  Minit CHAR, [C[C[C[C[C[?2004l[K[K[?2004hLname VARCHAR(15)[C[C[C[C[K[?2004lMinit CHAR, 
+  4  [K[?2004h  4  Lname VARCHAR(15) NOT NULL, [C[C[C[C[C[?2004l[K[K[?2004hSsn CHAR(9)[C[C[C[K[?2004lLname VARCHAR(15) NOT NULL, 
+  5  [K[?2004h  5  Ssn CHAR(9) NOT NULL, [C[C[C[C[C[?2004l[K[K[?2004hBdate DATE, [?2004l[KSsn CHAR(9) NOT NULL, 
+  6  [K[?2004h  6  Address VARCHAR(30)[C[C[C[C[C[C[C[C[C[K[?2004l[K  6  Bdate DATE, 
+  7  [K[?2004h  7  Address VARCHAR(30), [C[C[C[C[C[?2004l[K[K[?2004hSex CHAR, [?2004l[KAddress VARCHAR(30), 
+  8  [K[?2004h  8  Salary DECIMAL (10,2)[C[C[C[C[C[C[C[C[C[C[C[K[?2004l[K  8  Sex CHAR, 
+  9  [K[?2004h  9  Salary DECIMAL (10,2), [C[C[C[C[C[?2004l[K[K[?2004hSuper_ssn CHAR(9)[C[C[C[K[?2004lSalary DECIMAL (10,2), 
+ 10  [K[?2004h 10  Super_ssn CHAR(9), [C[C[C[C[C[?2004l[K[K[?2004hDno INT NOT NULL, [?2004l[KSuper_ssn CHAR(9), 
+ 11  [K[?2004h 11  PRIMARY KEY (Ssn)[C[C[C[C[C[C[C[C[C[C[K[?2004l[K 11  Dno INT NOT NULL, 
+ 12  [K[?2004h 12  PRIMARY KEY (Ssn);[C[C[C[C[C[?2004l[KPRIMARY KEY (Ssn);
+PRIMARY KEY (Ssn)
+                *
+ERROR at line 12:
+ORA-00907: missing right parenthesis
+
+
+SQL> [KSQL> [K[?2004hSQL> PRIMARY KEY (Ssn);[C[C[C[C[CDno INT NOT NULL, [C[C[C[C[C[1@Super_ssn CHAR(9)[C[C[C[C[C[C[C[C[4@alary DECIMAL (10,2[C[C[C[C[C[C[C[C[C[13Pex CHAR[C[C[C[C[C[C[C[11@Address VARCHAR(30)[C[C[C[C[C[C[C[9PBdate DATE[C[C[C[C[C[C[C[10@Ssn CHAR(9) NOT NULL[C[C[C[C[C[C[C[6@Lname VARCHAR(15[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[16PMinit CHAR[C[C[C[C[C[C[CFname VARCHAR(15) NOT NULL,[C[C[C[C[C[5PCREATE TABLE EMPLOYEE([C[C[C[C[CFname VARCHAR(15) NOT NULL, Minit CHAR, Lname VARCHAR(15) NOT NULL, Ssn CHAR(9) NOT NULL, Bdate DATE, Address VARCHAR(30), Sex CHAR, Salary DECIMAL (10,2), Super_ssn CHAR(9), Dno INT NOT NULL, PRIMARY KEY (Ssn);[A[A[C[C[C[C[CCREATE TABLE EMPLOYEE([K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[?2004l[KCREATE TABLE EMPLOYEE(
+  2  [K  2  [K[?2004h  2  Fname VARCHAR(15)[C[C[C[C NOT NULL, [C[C[C[C[C[?2004l[KFname VARCHAR(15) NOT NULL, 
+  3  [K  3  [K[?2004h  3  Minit CHAR, [C[C[C[C[C[?2004l[KMinit CHAR, 
+  4  [K  4  [K[?2004h  4  Lname VARCHAR(15)[C[C[C[C NOT NULL, [C[C[C[C[C[?2004l[KLname VARCHAR(15) NOT NULL, 
+  5  [K  5  [K[?2004h  5  Ssn CHAR(9)[C[C[C NOT NULL, [C[C[C[C[C[?2004l[KSsn CHAR(9) NOT NULL, 
+  6  [K  6  [K[?2004h  6  Bdate DATE, [C[C[C[C[C[?2004l[KBdate DATE, 
+  7  [K  7  [K[?2004h  7  Address VARCHAR(30)[C[C[C[C, [C[C[C[C[C[?2004l[KAddress VARCHAR(30), 
+  8  [K  8  [K[?2004h  8  Sex CHAR, [C[C[C[C[C[?2004l[KSex CHAR, 
+  9  [K  9  [K[?2004h  9  Salary DECIMAL (10,2)[C[C[C[C[C[C, [C[C[C[C[C[?2004l[KSalary DECIMAL (10,2), 
+ 10  [K 10  [K[?2004h 10  Super_ssn CHAR(9)[C[C[C, [C[C[C[C[C[?2004l[KSuper_ssn CHAR(9), 
+ 11  [K 11  [K[?2004h 11  Dno INT NOT NULL, [C[C[C[C[C[?2004l[KDno INT NOT NULL, 
+ 12  [K 12  [K[?2004h 12  PRIMARY KEY (Ssn)[C[C[C[C[C);[C[C[C[C[C[?2004l[KPRIMARY KEY (Ssn));
+[K
+Table created.
+
+SQL> [KSQL> [K[?2004hSQL> CREATE TABLE DEPARTMENT([C[C[C[C[C[?2004l[K[K[?2004hDname VARCHAR(15)[C[C[C[C[K[?2004lCREATE TABLE DEPARTMENT(
+  2  [K[?2004h  2  Dname VARCHAR(15) NOT NULL, [C[C[C[C[C[?2004l[K[K[?2004hDnumber INT, [?2004l[KDname VARCHAR(15) NOT NULL, 
+  3  [K[?2004h  3  Mgr_ssn CHAR(9)[C[C[C[C[C[C[C[C[K[?2004l[K  3  Dnumber INT, 
+  4  [K[?2004h  4  Mgr_ssn CHAR(9) NOT NULL, [C[C[C[C[C[?2004l[K[K[?2004hMgr_startdate DATE, PRIMAY KEY (Dnumber)[C[C[C[C[C[C[C[C[C[K[?2004lMgr_ssn CHAR(9) NOT NULL, 
+  5  [K[?2004h  5  Mgr_startdate DATE, PRIMAY KEY (Dnumber), [C[C[C[C[C[?2004l[K[K[?2004hUNIQUE (Dname)[C[C[C[C[C[C[C[K[?2004lMgr_startdate DATE, PRIMAY KEY (Dnumber), 
+  6  [K[?2004h  6  UNIQUE (Dname), [C[C[C[C[C[?2004l[K[K[?2004hFOREIGN KEY (Mgr_ssn)[C[C[C[C[C[C[C[C[C[K[?2004lUNIQUE (Dname), 
+  7  [K[?2004h  7  FOREIGN KEY (Mgr_ssn) REFERENCES EMPLOYEE(Ssn)[C[C[C[C[C);[C[C[C[C[C[?2004l[KFOREIGN KEY (Mgr_ssn) REFERENCES EMPLOYEE(Ssn));
+Mgr_startdate DATE, PRIMAY KEY (Dnumber),
+                               *
+ERROR at line 5:
+ORA-00907: missing right parenthesis
+
+
+SQL> [KSQL> [K[?2004hSQL> CREATE TABLE DEPARTMENT([C[C[C[C[C[?2004l[KCREATE TABLE DEPARTMENT(
+  2  [K  2  [K[?2004h  2  Dname VARCHAR(15)[C[C[C[C NOT NULL, [C[C[C[C[C[?2004l[K[K[?2004hDnumber INT, [?2004l[KDname VARCHAR(15) NOT NULL, 
+  3  [K[?2004h  3  Mgr_ssn CHAR(9)[C[C[C[C[C[C[C[C[K[?2004l[K  3  Dnumber INT, 
+  4  [K[?2004h  4  Mgr_ssn CHAR(9) NOT NULL, [C[C[C[C[C[?2004l[K[K[?2004hMgr_startdate DATE, [K[?2004lMgr_ssn CHAR(9) NOT NULL, 
+  5  [K[?2004h  5  Mgr_startdate DATE, [C[C[C[C[C[?2004l[KMgr_startdate DATE, 
+  6  [K  6  [K[?2004h  6  PRIMAY KEY (Dnumber)[C[C[C[C[C[C[C[C[C), [C[C[C[C[C[?2004l[KPRIMAY KEY (Dnumber)), 
+  7  [K  7  [K[?2004h  7  UNIQUE (Dname)[C[C[C[C[C[C[C, [C[C[C[C[C[?2004l[KUNIQUE (Dname), 
+  8  [K  8  [K[?2004h  8  FOREIGN KEY (Mgr_ssn)[C[C[C[C[C[C[C[C[C REFERENCES EMPLOYEE(Ssn)[C[C[C[C[C);[C[C[C[C[C[?2004l[KFOREIGN KEY (Mgr_ssn) REFERENCES EMPLOYEE(Ssn));
+PRIMAY KEY (Dnumber)),
+           *
+ERROR at line 6:
+ORA-00907: missing right parenthesis
+
+
+SQL> [KSQL> [K[?2004hSQL> FOREIGN KEY (Mgr_ssn) REFERENCES EMPLOYEE(Ssn));[C[C[C[C[C[32PUNIQUE (Dname), [C[C[C[C[C[7@PRIMAY KEY (Dnumber)[C[C[C[C[C[C[C[C[3PMgr_startdate DATE[C[C[C[C[C[C[C[C[C[C[C[C[6@sn CHAR(9) NOT NULL[C[C[C[C[C[C[C[13PDnumber INT[C[C[C[C[C[C[C[C[C[15@ame VARCHAR(15) NOT NULL[C[C[C[C[C[C[C[4PCREATE TABLE DEPARTMENT([C[C[C[C[CFOREIGN KEY (Mgr_ssn) REFERENCES EMPLOYEE(Ssn));[C[C[C[C[C[24PCREATE TABLE DEPARTMENT([C[C[C[C[C[?2004l[KCREATE TABLE DEPARTMENT(
+  2  [K  2  [K[?2004h  2  PRIMAY KEY (Dnumber)[C[C[C[C[C[C[C[C[C,[C[C[C[C[C[?2004l[KPRIMAY KEY (Dnumber),
+  3  [K  3  [K[?2004h  3  ;[?2004l[K;
+PRIMAY KEY (Dnumber),
+           *
+ERROR at line 2:
+ORA-00907: missing right parenthesis
+
+
+SQL> [KSQL> [K[?2004hSQL> CREATE TABLE DEPT_LOCATIONS([C[C[C[C[C[?2004l[KCREATE TABLE DEPT_LOCATIONS(
+  2  [K  2  [K[?2004h  2  Dnumber INT NOT NULL, [C[C[C[C[C[?2004l[K[K[?2004hDlocation VARCHAR(15)[C[C[C[C[K[?2004lDnumber INT NOT NULL, 
+  3  [K[?2004h  3  Dlocation VARCHAR(15) NOT NULL, [C[C[C[C[C[?2004l[K[K[?2004hPRIMARY KEY (Dnumber, Dlocation)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[?2004lDlocation VARCHAR(15) NOT NULL, 
+  4  [K[?2004h  4  PRIMARY KEY (Dnumber, Dlocation), [C[C[C[C[C[?2004l[K[K[?2004hFOREIGN KEY (Dnumber)[C[C[C[C[C[C[C[C[C[K[?2004lPRIMARY KEY (Dnumber, Dlocation), 
+  5  [K[?2004h  5  FOREIGN KEY (Dnumber) REFERENCES DEPARTMENT(Dnumber)[C[C[C[C[C[C[C[C[C);[C[C[C[C[C[?2004l[KFOREIGN KEY (Dnumber) REFERENCES DEPARTMENT(Dnumber));
+[KFOREIGN KEY (Dnumber) REFERENCES DEPARTMENT(Dnumber))
+                                 *
+ERROR at line 5:
+ORA-00942: table or view does not exist
+
+
+SQL> [KSQL> [K[?2004hSQL> CREATE TABLE DEPT_LOCATIONS([C[C[C[C[C[?2004l[KCREATE TABLE DEPT_LOCATIONS(
+  2  [K  2  [K[?2004h  2  Dnumber INT NOT NULL, [C[C[C[C[C[?2004l[K[K[?2004hDlocation VARCHAR(15)[C[C[C[C[K[?2004lDnumber INT NOT NULL, 
+  3  [K[?2004h  3  Dlocation VARCHAR(15) NOT NULL, [C[C[C[C[C[?2004l[K[K[?2004hPRIMARY KEY (Dnumber, Dlocation)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[?2004lDlocation VARCHAR(15) NOT NULL, 
+  4  [K[?2004h  4  PRIMARY KEY (Dnumber, Dlocation), [K[K;[C[C[C[C[C[?2004l[KPRIMARY KEY (Dnumber, Dlocation);
+PRIMARY KEY (Dnumber, Dlocation)
+                               *
+ERROR at line 4:
+ORA-00907: missing right parenthesis
+
+
+SQL> [KSQL> [K[?2004hSQL> CREATE TABLE DEPARTMENT(Dname VARCHAR(15)[C[C[C[C NOT NULL, [C[C[C[C[C[?2004l[K[K[?2004hDnumber INT, [?2004l[KCREATE TABLE DEPARTMENT(Dname VARCHAR(15) NOT NULL, 
+  2  [K[?2004h  2  Mgr_ssn CHAR(9)[C[C[C[C[C[C[C[C[K[?2004l[K  2  Dnumber INT, 
+  3  [K[?2004h  3  Mgr_ssn CHAR(9) NOT NULL, [C[C[C[C[C[?2004l[K[K[?2004hMgr_startdate DATE, [?2004l[KMgr_ssn CHAR(9) NOT NULL, 
+  4  [K[?2004h  4  PRIMAY KEY (Dnumber)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[?2004l[K  4  Mgr_startdate DATE, 
+  5  [K[?2004h  5  PRIMAY KEY (Dnumber), [C[C[C[C[C[?2004l[K[K[?2004hUNIQUE (Dname)[C[C[C[C[C[C[C[K[?2004lPRIMAY KEY (Dnumber), 
+  6  [K[?2004h  6  UNIQUE (Dname), [C[C[C[C[C[?2004l[K[K[?2004hFOREIGN KEY (Mgr_ssn)[C[C[C[C[C[C[C[C[C[K[?2004lUNIQUE (Dname), 
+  7  [K[?2004h  7  FOREIGN KEY (Mgr_ssn) REFERENCES EMPLOYEE(Ssn)[C[C[C[C[C);[C[C[C[C[C[?2004l[KFOREIGN KEY (Mgr_ssn) REFERENCES EMPLOYEE(Ssn));
+PRIMAY KEY (Dnumber),
+           *
+ERROR at line 5:
+ORA-00907: missing right parenthesis
+
+
+SQL> [KSQL> [K[?2004hSQL> CREATE TABLE DEPARTMENT([C[C[C[C[C[?2004l[K[K[?2004hDname VARCHAR(15)[C[C[C[C[K[?2004lCREATE TABLE DEPARTMENT(
+  2  [K[?2004h  2  Dname VARCHAR(15) NOT NULL, [C[C[C[C[C[?2004l[K[K[?2004hDnumber INT, [?2004l[KDname VARCHAR(15) NOT NULL, 
+  3  [K[?2004h  3  Mgr_ssn CHAR(9)[C[C[C[C[C[C[C[C[K[?2004l[K  3  Dnumber INT, 
+  4  [K[?2004h  4  Mgr_ssn CHAR(9) NOT NULL, [C[C[C[C[C[?2004l[K[K[?2004hMgr_startdate DATE, [?2004l[KMgr_ssn CHAR(9) NOT NULL, 
+  5  [K[?2004h  5  UNIQUE (Dname)[C[C[C[C[C[C[C[C[C[C[C[C[K[?2004l[K  5  Mgr_startdate DATE, 
+  6  [K[?2004h  6  UNIQUE (Dname), [C[C[C[C[C[?2004l[K[K[?2004hFOREIGN KEY (Mgr_ssn)[C[C[C[C[C[C[C[C[C[K[?2004lUNIQUE (Dname), 
+  7  [K[?2004h  7  FOREIGN KEY (Mgr_ssn) REFERENCES EMPLOYEE(Ssn)[C[C[C[C[C);[C[C[C[C[C[?2004l[KFOREIGN KEY (Mgr_ssn) REFERENCES EMPLOYEE(Ssn));
+[K
+Table created.
+
+SQL> [KSQL> [K[?2004hSQL> CREATE TABLE DEPARTMENT([C[C[C[C[C[?2004l[K[K[?2004hDname VARCHAR(15)[C[C[C[C[K[?2004lCREATE TABLE DEPARTMENT(
+  2  [K[?2004h  2  Dname VARCHAR(15) NOT NULL, [C[C[C[C[C[?2004l[K[K[?2004hDnumber INT, [?2004l[KDname VARCHAR(15) NOT NULL, 
+  3  [K[?2004h  3  Mgr_ssn CHAR(9)[C[C[C[C[C[C[C[C[K[?2004l[K  3  Dnumber INT, 
+  4  [K[?2004h  4  Mgr_ssn CHAR(9) NOT NULL, [C[C[C[C[C[?2004l[K[K[?2004hMgr_startdate DATE, [?2004l[KMgr_ssn CHAR(9) NOT NULL, 
+  5  [K[?2004h  5  PRIMAY KEY (Dnumber)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[?2004l[K  5  Mgr_startdate DATE, 
+  6  [K[?2004h  6  PRIMAY KEY (Dnumber), [C[C[C[C[C[?2004l[K[K[?2004hUNIQUE (Dname)[C[C[C[C[C[C[C[K[?2004lPRIMAY KEY (Dnumber), 
+  7  [K[?2004h  7  UNIQUE (Dname), [C[C[C[C[C[?2004l[K[K[?2004hFOREIGN KEY (Mgr_ssn)[C[C[C[C[C[C[C[C[C[K[?2004lUNIQUE (Dname), 
+  8  [K[?2004h  8  FOREIGN KEY (Mgr_ssn) REFERENCES EMPLOYEE(Ssn)[C[C[C[C[C);[C[C[C[C[C[?2004l[KFOREIGN KEY (Mgr_ssn) REFERENCES EMPLOYEE(Ssn));
+PRIMAY KEY (Dnumber),
+           *
+ERROR at line 6:
+ORA-00907: missing right parenthesis
+
+
+SQL> [KSQL> [K[?2004hSQL> alter table DEPARTMENT [C[C[C[C[C[?2004l[Kalter table DEPARTMENT 
+  2  [K  2  [K[?2004h  2  add constraint DEPARTMENT_Dnumber primary key (Dnumber)[C[C[C[C[C[C[C[C[C;[C[C[C[C[C[?2004l[Kadd constraint DEPARTMENT_Dnumber primary key (Dnumber);
+[K
+Table altered.
+
+SQL> [KSQL> [K[?2004hSQL> CREATE TABLE DEPT_LOCATIONS([C[C[C[C[C[?2004l[K[K[?2004hDnumber INT NOT NULL, [?2004l[KCREATE TABLE DEPT_LOCATIONS(
+  2  [K[?2004h  2  Dlocation VARCHAR(15)[C[C[C[C[C[C[C[C[C[K[?2004l[K  2  Dnumber INT NOT NULL, 
+  3  [K[?2004h  3  Dlocation VARCHAR(15) NOT NULL, [C[C[C[C[C[?2004l[K[K[?2004hPRIMARY KEY (Dnumber, Dlocation)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[?2004lDlocation VARCHAR(15) NOT NULL, 
+  4  [K[?2004h  4  PRIMARY KEY (Dnumber, Dlocation), [C[C[C[C[C[?2004l[K[K[?2004hFOREIGN KEY (Dnumber)[C[C[C[C[C[C[C[C[C[K[?2004lPRIMARY KEY (Dnumber, Dlocation), 
+  5  [K[?2004h  5  FOREIGN KEY (Dnumber) REFERENCES DEPARTMENT(Dnumber)[C[C[C[C[C[C[C[C[C);[C[C[C[C[C[?2004l[KFOREIGN KEY (Dnumber) REFERENCES DEPARTMENT(Dnumber));
+
+Table created.
+
+SQL> [KSQL> [K[?2004hSQL> CREATE TABLE Project([C[C[C[C[C[?2004l[K[K[?2004hPname VARCHAR(15)[C[C[C[C[K[?2004lCREATE TABLE Project(
+  2  [K[?2004h  2  Pname VARCHAR(15) NOT NULL, Pnumber INT NOT NULL, Plocation VARCHAR(15)[C[C[C[C, [C[C[C[C[C[?2004l[K[K[?2004hDnum INT NOT NULL, PRIMARY KEY (Pnumber)[C[C[C[C[C[C[C[C[C[K[?2004lPname VARCHAR(15) NOT NULL, Pnumber INT NOT NULL, Plocation VARCHAR(15), 
+  3  [K[?2004h  3  Dnum INT NOT NULL, PRIMARY KEY (Pnumber), UNIQUE (Pname)[C[C[C[C[C[C[C, [C[C[C[C[C[?2004l[K[K[?2004hFOREIGN KEY (Dnum)[C[C[C[C[C[C[K[?2004lDnum INT NOT NULL, PRIMARY KEY (Pnumber), UNIQUE (Pname), 
+  4  [K[?2004h  4  FOREIGN KEY (Dnum) REFERENCES DEPARTMENT(Dnumber)[C[C[C[C[C[C[C[C[C);[C[C[C[C[C[?2004l[KFOREIGN KEY (Dnum) REFERENCES DEPARTMENT(Dnumber));
+
+Table created.
+
+SQL> [KSQL> [K[?2004hSQL> CREATE TABLE WORKS_ON([C[C[C[C[C[?2004l[K[K[?2004hEssn CHAR(9)[C[C[C[K[?2004lCREATE TABLE WORKS_ON(
+  2  [K[?2004h  2  Essn CHAR(9) NOT NULL, Pno INT NOT NULL, [C[C[C[C[C[?2004l[K[K[?2004hHours DECIMAL(3,1)[C[C[C[C[C[K[?2004lEssn CHAR(9) NOT NULL, Pno INT NOT NULL, 
+  3  [K[?2004h  3  Hours DECIMAL(3,1) NOT NULL, PRIMARY KEY (Essn, Pno)[C[C[C[C[C[C[C[C[C[C[C, [C[C[C[C[C[?2004l[K[K[?2004hFOREIGN KEY (Essn)[C[C[C[C[C[C[K[?2004lHours DECIMAL(3,1) NOT NULL, PRIMARY KEY (Essn, Pno), 
+  4  [K[?2004h  4  FOREIGN KEY (Essn) REFERENCES EMPLOYEE(Ssn)[C[C[C[C[C, [C[C[C[C[C[?2004l[K[K[?2004hFOREIGN KEY (Pno)[C[C[C[C[C[K[?2004lFOREIGN KEY (Essn) REFERENCES EMPLOYEE(Ssn), 
+  5  [K[?2004h  5  FOREIGN KEY (Pno) REFERENCES PROJECT(Pnumber)[C[C[C[C[C[C[C[C[C);[C[C[C[C[C[?2004l[KFOREIGN KEY (Pno) REFERENCES PROJECT(Pnumber));
+
+Table created.
+
+SQL> [KSQL> [K[?2004hSQL> CREATE TABLE DEPENDENT[C[C[C[C[C[?2004l[K[K[?2004h(Essn CHAR(9)[C[C[C[K[?2004lCREATE TABLE DEPENDENT
+  2  [K[?2004h  2  (Essn CHAR(9) NOT NULL, Dependent_name VARCHAR(15)[C[C[C[C NOT NULL, Sex CHAR, Bdate DATE, [C[C[C[C[C[?2004l[K[K[?2004hPRIMARY KEY (Essn, Dependent_name)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[?2004l(Essn CHAR(9) NOT NULL, Dependent_name VARCHAR(15) NOT NULL, Sex CHAR, Bdate DATE, 
+  3  [K[?2004h  3  PRIMARY KEY (Essn, Dependent_name), FOREIGN KEY (Essn)[C[C[C[C[C[C REFERENCES EMPLOYEE(Ssn)[C[C[C[C[C);[C[C[C[C[C[?2004l[KPRIMARY KEY (Essn, Dependent_name), FOREIGN KEY (Essn) REFERENCES EMPLOYEE(Ssn));
+
+Table created.
+
+SQL> [KSQL> [K[?2004hSQL> desc T[KEm[KMPLOYEE[C[C[C[C[C[?2004l[Kdesc EMPLOYEE
+ Name					   Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ FNAME					   NOT NULL VARCHAR2(15)
+ MINIT						    CHAR(1)
+ LNAME					   NOT NULL VARCHAR2(15)
+ SSN					   NOT NULL CHAR(9)
+ BDATE						    DATE
+ ADDRESS					    VARCHAR2(30)
+ SEX						    CHAR(1)
+ SALARY 					    NUMBER(10,2)
+ SUPER_SSN					    CHAR(9)
+ DNO					   NOT NULL NUMBER(38)
+
+SQL> [KSQL> [K[?2004hSQL> DES[K[K[Kdesc DEPARTMENT[C[C[C[C[C[?2004l[Kdesc DEPARTMENT
+ Name					   Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ DNAME					   NOT NULL VARCHAR2(15)
+ DNUMBER				   NOT NULL NUMBER(38)
+ MGR_SSN				   NOT NULL CHAR(9)
+ MGR_STARTDATE					    DATE
+
+SQL> [KSQL> [K[?2004hSQL> desc DEPT_LOCATIONS[C[C[C[C[C[?2004l[Kdesc DEPT_LOCATIONS
+ Name					   Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ DNUMBER				   NOT NULL NUMBER(38)
+ DLOCATION				   NOT NULL VARCHAR2(15)
+
+SQL> [KSQL> [K[?2004hSQL> D[Kdesc Project[C[C[C[C[C[?2004l[Kdesc Project
+ Name					   Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PNAME					   NOT NULL VARCHAR2(15)
+ PNUMBER				   NOT NULL NUMBER(38)
+ PLOCATION					    VARCHAR2(15)
+ DNUM					   NOT NULL NUMBER(38)
+
+SQL> [KSQL> [K[?2004hSQL> desc Works[K[K[K[KORKS_ON[C[C[C[C[C[?2004l[Kdesc WORKS_ON
+ Name					   Null?    Type
+ -----------------------
